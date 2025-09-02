@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* General resets */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: #2e2e3a; }
+
+    /* Navbar */
+    nav {
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
+      color: white;
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: bold; font-size: 1.5rem; }
+    .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+    .nav-links li a { color: white; text-decoration: none; font-weight: bold; }
+    .nav-links li a:hover { color: #fff700; }
+
+    /* Sections */
+    .section { padding: 4rem 1rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* Home / Hero */
+    .home { background: linear-gradient(to right, #43cea2, #185a9d); text-align: center; padding-top: 6rem; padding-bottom: 6rem; color: white; }
+    .home h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .home p { font-size: 1.2rem; margin-bottom: 2rem; }
+
+    /* About */
+    .about { background-color: #f9f9f9; }
+    .about h2 { color: #185a9d; margin-bottom: 1rem; text-align: center; }
+    .about p { font-size: 1.1rem; text-align: center; }
+
+    /* Links Section - card style */
+    .links { background-color: #e0f7fa; }
+    .links h2 { color: #00796b; margin-bottom: 2rem; text-align: center; }
+    .links-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .link-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #ffffff;
+      color: #2e2e3a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 180px;
+      height: 150px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .link-card i {
+      margin-bottom: 0.75rem;
+      color: #00796b;
+    }
+
+    .link-card span { font-size: 1.1rem; }
+
+    .link-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer { background: linear-gradient(90deg, #ff7e5f, #feb47b); color: white; text-align: center; padding: 1rem 0; margin-top: 2rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">DevOps Project</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#links">Links</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero / Home Section -->
+<section id="home" class="section home">
+  <div class="container">
+    <h1>Welcome to Our DevOps Git Project</h1>
+    <p>Collaborating on Git, Branches, Pull Requests & GitHub Pages Hosting.</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section about">
+  <div class="container">
+    <h2>About the Project</h2>
+    <p>This project demonstrates collaboration using Git, creating branches, pull requests, and hosting the repository using GitHub Pages. Owner: Sourav Kumar</p>
+  </div>
+</section>
+
+<!-- Links Section -->
+<section id="links" class="section links">
+  <div class="container">
+    <h2>Project Links</h2>
+    <div class="links-grid">
+      <!-- README -->
+      <a href="README.md" target="_blank" class="link-card">
+        <i class="fas fa-file-alt fa-2x"></i>
+        <span>README.md</span>
+      </a>
+
+      <!-- GitHub Repo -->
+      <a href="https://github.com/souravo1/devops-git-project" target="_blank" class="link-card">
+        <i class="fab fa-github fa-2x"></i>
+        <span>GitHub Repo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>© 2025 DevOps Git Project | Owner: SOURAV KUMAR</p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for navigation links
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
